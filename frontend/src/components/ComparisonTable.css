@@ -1,0 +1,134 @@
+.table-container {
+    background: #111111;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #222222;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.comparison-table thead {
+    background: #0d0d0d;
+}
+
+.comparison-table th {
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    color: #888;
+    border-bottom: 2px solid #1a1a1a;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.comparison-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #1a1a1a;
+    color: #e0e0e0;
+    vertical-align: middle;
+}
+
+.comparison-table tbody tr:hover {
+    background: #1a1a1a !important;
+}
+
+.record-id {
+    font-weight: 600;
+    color: #fff;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.field-name {
+    color: #999;
+    font-weight: 500;
+}
+
+.value-cell {
+    font-family: monospace;
+    font-size: 12px;
+    max-width: 200px;
+    word-break: break-word;
+    color: #e0e0e0;
+}
+
+.value-cell.empty {
+    color: #444;
+    font-style: italic;
+}
+
+.reason-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+}
+
+.reason-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.location-cell {
+    font-size: 11px;
+    color: #666;
+}
+
+.expand-icon {
+    display: inline-block;
+    font-size: 12px;
+    color: #888;
+    transition: transform 0.2s;
+}
+
+.loading-state {
+    text-align: center;
+    padding: 32px;
+    color: #666;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #222;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .comparison-table th { padding: 8px 10px; font-size: 10px; }
+    .comparison-table td { padding: 6px 10px; }
+    .value-cell { font-size: 11px; max-width: 120px; }
+}
+
+@media (max-width: 480px) {
+    .comparison-table th { padding: 6px 8px; font-size: 9px; }
+    .comparison-table td { padding: 4px 8px; }
+    .value-cell { font-size: 10px; max-width: 80px; }
+    .reason-badge { font-size: 9px; padding: 2px 6px; }
+}
