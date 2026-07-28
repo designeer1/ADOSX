@@ -26,7 +26,7 @@ function App() {
         field_disagreements: 0
     });
 
-    const API_URL = 'http://localhost:8000/api';
+   const API_URL = 'https://adosx.onrender.com/api';
 
     // Clear any existing data on page load
     useEffect(() => {
